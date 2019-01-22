@@ -31,7 +31,13 @@ def initialize(team_name, coach_name, players, points)
     return @players
   end
 
-  
+  def check_player(player)
+    if valid_player = @players.include?(player)
+    return "#{player} is on the team"
+  else "#{player} is NOT on the team"
+  end
+end
+
 
   def winners_points(result)
        if result == "win"
